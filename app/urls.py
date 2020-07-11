@@ -9,4 +9,5 @@ urlpatterns = [
 
     # The home page
     path('', views.index, name='index'),
+    path('', views.upload_csv, name='upload_csv'),
 ]
