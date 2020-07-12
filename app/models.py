@@ -15,5 +15,5 @@ class Details(models.Model):
     Amount = models.IntegerField()
     Quality = models.CharField(max_length=50)
     Price = models.DecimalField(max_digits=10, decimal_places=2)
-    Buyer = models.CharField(max_length=50)
-    Profit = models.DecimalField(max_digits=10, decimal_places=2)
+    Buyer = models.CharField(max_length=50, null=True, blank=True)
+    Profit = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
