@@ -1,7 +1,5 @@
 from __future__ import unicode_literals
 
-from django.db import models
-
 class AccountHistory(models.Model):
     id = models.BigIntegerField(primary_key=True, editable=True)
     Timestamp = models.DateTimeField(auto_now=False, auto_now_add=False)
