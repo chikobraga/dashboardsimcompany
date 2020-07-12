@@ -10,7 +10,7 @@ class AccountHistory(models.Model):
     Descriptions = models.CharField(max_length=50)
 
 class Details(models.Model):
-    Accountid = models.ForeignKey(id, related_name='id_account', null=True, blank=True, on_delete=models.CASCADE)
+    Accountid = models.ForeignKey(AccountHistory, related_name='id_account', null=True, blank=True, on_delete=models.CASCADE)
     Category = models.CharField(max_length=50)
     Amount = models.Integer()
     Quality = models.CharField(max_length=50)
