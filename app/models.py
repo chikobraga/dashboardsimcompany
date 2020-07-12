@@ -11,6 +11,7 @@ class AccountHistory(models.Model):
 
 class Details(models.Model):
     Accountid = models.ForeignKey(AccountHistory, related_name='id_account', null=True, blank=True, on_delete=models.CASCADE)
+    Resource = models.CharField(max_length=50)
     Amount = models.IntegerField()
     Quality = models.CharField(max_length=50)
     Price = models.DecimalField(max_digits=10, decimal_places=2)
