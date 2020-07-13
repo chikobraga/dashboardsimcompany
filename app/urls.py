@@ -9,4 +9,6 @@ urlpatterns = [
 
     # The home page
     path('', views.index, name='index'),
+    path('', views.simple_upload, name='simple_upload'),
+
 ]
