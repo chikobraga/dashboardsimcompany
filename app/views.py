@@ -25,8 +25,8 @@ def simple_upload(request):
         fs = FileSystemStorage()
         filename = fs.save(myfile.name, myfile)
         uploaded_file_url = fs.url(filename)
-        return render(request, 'app/index.html', {
+        context = {
             'uploaded_file_url': uploaded_file_url
-        })
-    return render(request, 'app/index.html')
+        }
+    return HttpResponse(template.render(context, request))
 
